@@ -13,8 +13,7 @@ const Form = () => {
             <label>Ämne</label>
             <input type="text"></input>
             <label>Meddelande</label>
-            <textarea rows="6" placeholder="Type your
-             message here"/>
+            <textarea rows="6" placeholder="Skriv ditt meddelande här..."/>
              <button className="btn">Skicka</button>
         </form>
     </div>
