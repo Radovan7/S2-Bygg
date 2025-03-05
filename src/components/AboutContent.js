@@ -9,7 +9,8 @@ const AboutContent = () => {
     <div className="about">
       <div className="left">
         <h1>Om oss</h1>
-        <p>Bred expertis inom ... </p>
+        <p>Verksamhetsbeskrivning: snickare, plattsättare, målare,
+           montering av kök, markanläggning, rivning, ombyggnad, tillbyggnad. </p>
         <Link to="/contact">
           <button className="btn">Kontakt</button>
         </Link>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+/*import { Link } from "react-router-dom";
 import "./PricingCardStyles.css";
 
 import React from "react";
@@ -48,4 +48,4 @@ const PricingCard = () => {
   );
 };
 
-export default PricingCard;
+export default PricingCard;*/

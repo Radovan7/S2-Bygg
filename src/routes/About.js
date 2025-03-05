@@ -11,7 +11,12 @@ const About = () => {
     <div>
       <Navbar />
       <HeroImg2 heading="OM OSS" 
-      text="Bred expertis inom....." />
+      text={
+        <>
+           Firma S2Bygg AB ligger i Nynäshamn och sysslar med byggnation. <br />
+           Vårt motto är att alltid möta våra uppskattade kunder och ge dem det de vill ha, och lite mer. 
+        </>
+      } />
       <AboutContent />
       <Footer />
     </div>

@@ -29,11 +29,14 @@
 
 .hero-img h1 {
     font-size: 2.4rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero-img p {
     font-size: 1.4rem;
     text-align: center;
+    line-height: 1.8; 
+    margin-top: 0.5rem;
 }
 
 @media screen and (max-width: 640px) {

@@ -1,51 +1,79 @@
 .about {
-    width: 100%;
-    margin: 3rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 100%;
+  width: 100%;
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Sprečava centriranje */
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 0 2rem; /* Dodatni padding za bolji izgled */
+}
+
+.about .left {
+  text-align: left; /* Poravnanje teksta levo */
+  margin: auto;
+  padding: 1rem;
+  max-width: 400px; /* Malo povećan max-width */
+}
+
+.about .left p {
+  margin: 1.2rem 0;
+  line-height: 1.5; /* Poboljšava čitljivost */
+}
+
+.about .right {
+  max-width: 700px;
+}
+
+.right .img-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+  align-items: center;
+  justify-content: center; /* Centriranje slika */
+  text-align: center;
+}
+
+.right .img {
+  max-width: 100%;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+.right .top {
+  grid-column: 1 / span 8;
+  grid-row: 1;
+  padding-top: 10%;
+  z-index: 6;
+}
+
+.right .bottom {
+  grid-column: 4 / -1;
+  grid-row: 1;
+  z-index: 5;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+      flex-direction: column;
+      text-align: center;
   }
-  
+
   .about .left {
-    text-align: center;
-    margin: auto;
-    padding: 1rem;
-    max-width: 350px;
+      max-width: 90%;
+      text-align: center;
   }
-  
-  .about .left p {
-    margin: 1.2rem 0;
-  }
-  
-  .about .right {
-    max-width: 700px;
-  }
-  
+
   .right .img-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    position: relative;
-    align-items: center;
-    text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
-  
-  .right .img {
-    max-width: 90%;
-    border: 1px solid #333;
-  }
-  
-  .right .top {
-    grid-column: 1 / span 8;
-    grid-row: 1;
-    padding-top: 20%;
-    z-index: 6;
-  }
-  
+
+  .right .top,
   .right .bottom {
-      grid-column: 4 / -1;
-      grid-row: 1;
-      z-index: 5;
-    }
-  
+      grid-column: auto;
+      grid-row: auto;
+      padding-top: 0;
+  }
+}

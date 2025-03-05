@@ -5,18 +5,18 @@ import pro3 from '../assets/project3.jpg';
 const ProjectCardData = [
     {
         imgsrc: pro1,
-        title: "Ecommerce Website Design",
-        text: "This is a first project description",
+        title: "BADRUMSRENOVERING",
+        text: "Vi hjälper dig med allt från idé och planering till VVS-installationer",
     },
     {
         imgsrc: pro2,
-        title: "Ecommerce Website Design",
-        text: "This is a second project description",
+        title: "KÖKSRENOVERING",
+        text: "Med oss får du en pålitlig partnersom bygger ditt kök från grund till klart",
     },
     {
         imgsrc: pro3,
-        title: "Ecommerce Website Design",
-        text: "This is a third project description",
+        title: "TOTALRENOVERING",
+        text: "S2-Bygg sköter om hela din renovering, från start till slutförande",
     },
 ]   
 

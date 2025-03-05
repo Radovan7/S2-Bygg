@@ -10,9 +10,16 @@ const Project = () => {
   return <div>
     <Navbar />
     <HeroImg2 heading="VÅRA PROJEKT." 
-    text="Some of my most recent works"/>
+    text={
+      <>
+        Här kan du titta på några av våra arbeten, såväl som pågående projekt.
+        <br />
+        Vi samarbetar med företag som IN3prenör och samtidigt med privatkunder.
+      </>
+    }
+    />
     <Work />
-    <PricingCard />
+    {/* <PricingCard /> */}
     <Footer />
   </div>;
 };

@@ -1,7 +1,5 @@
 import "./FooterStyles.css";
-
 import React from "react";
-
 import {
   FaFacebook,
   FaHome,
@@ -12,64 +10,58 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <div className="footer">
       <div className="footer-container">
         <div className="left">
+          <h3>S2 Bygg AB</h3>
           <div className="location">
-            <FaHome size={20} style={{ color: "#fff", marginRight: "2rem" }} />
+            <FaHome size={20} style={{ color: "#fff" }} />
             <div>
-            <a 
-                href="https://www.google.com/maps/place/Backlurav%C3%A4gen+15B,+149+43+Nyn%C3%A4shamn/@58.9137267,17.9358904,17z/data=!3m1!4b1!4m6!3m5!1s0x465f5c2d9842af77:0x82c942f3e86be371!8m2!3d58.9137267!4d17.9384707!16s%2Fg%2F11c5f7jjm5?entry=ttu&g_ep=EgoyMDI0MTAwOC4wIKXMDSoASAFQAw%3D%3Dhttps://www.google.com/maps/search/?api=1&query=1234+Street+Name,+Sweden"
+              <a 
+                href="https://www.google.com/maps/place/Backlurav%C3%A4gen+15B,+149+43+Nyn%C3%A4shamn/@58.9137267,17.9358904,17z/"
                 target="_blank" 
-                rel="noopener noreferrer" 
-                style={{ color: "#fff" }}
+                rel="noopener noreferrer"
               >
-                BACKLURAVÄGEN 15 B
+                BACKLURAVÄGEN 15 B<br />
                 149 43 Nynäshamn
               </a>
             </div>
           </div>
-          <div className="phone">
-            <h4>
-              <FaPhone
-                size={20}
-                style={{ color: "#fff", marginRight: "2rem" }}
-              />
-              <a href="tel:+46700039072" style={{ color: "#fff" }}>+46 70 003 9072</a>
-            </h4>
-          </div>
-          <div className="email">
-            <h4>
-              <FaMailBulk
-                size={20}
-                style={{ color: "#fff", marginRight: "2rem" }}
-              />
-              <a href="mailto:radosce0@gmail.com" style={{ color: "#fff" }}>radosce0@gmail.com</a>
-            </h4>
-          </div>
         </div>
 
         <div className="right">
-          <h4>Org.nr.</h4>
-          <p>
-            559431-9013
-          </p>
+          <h3>Kontakta oss</h3>
+          <div className="contact-links">
+            <div className="contact-item">
+              <FaPhone size={20} />
+              <a href="tel:+46700039072">+46 70 003 9072</a>
+            </div>
+            <div className="contact-item">
+              <FaMailBulk size={20} />
+              <a href="mailto:s2byggab@outlook.com">s2byggab@outlook.com</a>
+            </div>
+            <div className="org-number">
+              <span>Org.nr: 559431-9013</span>
+            </div>
+          </div>
           <div className="social">
-            <FaFacebook
-              size={30}
-              style={{ color: "#fff", marginRight: "1rem" }}
-            />
-            <FaTwitter
-              size={30}
-              style={{ color: "#fff", marginRight: "1rem" }}
-            />
-            <FaLinkedin
-              size={30}
-              style={{ color: "#fff", marginRight: "1rem" }}
-            />
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebook size={24} />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <FaTwitter size={24} />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin size={24} />
+            </a>
           </div>
         </div>
+      </div>
+      <div className="copyright">
+        <p>&copy; {2025} S2 Bygg AB. Alla rättigheter förbehållna.</p>
       </div>
     </div>
   );

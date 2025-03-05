@@ -26,7 +26,7 @@ ul{
 .btn {
     padding: 12px 32px;
     font-size: 1rem;
-    text-transform: uppercase;
+    text-transform: none;
     background: rgb(248,217,15);
     color: #222;
     border: 1px solid #fff;
