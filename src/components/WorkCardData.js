@@ -11,7 +11,7 @@ const ProjectCardData = [
     {
         imgsrc: pro2,
         title: "KÖKSRENOVERING",
-        text: "Med oss får du en pålitlig partnersom bygger ditt kök från grund till klart",
+        text: "Med oss får du en pålitlig partner som bygger ditt kök från grund till klart",
     },
     {
         imgsrc: pro3,

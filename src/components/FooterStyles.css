@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
-    padding: 4rem 0 2rem 0;
-    background-color: rgba(19, 19, 19, 0.9);
+    padding: 6rem 0 2rem 0;
+    background-color: rgba(19, 19, 19, 0.8);
     color: #fff;
 }
 
@@ -9,25 +9,27 @@
    max-width: 1140px;
    margin: auto;
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
+   grid-template-columns: repeat(3, 1fr);
    grid-gap: 40px;
    padding: 0 2rem;
 }
 
-.left {
+.footer-column {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
 }
 
-.left h3, .right h3 {
+.footer-column h3 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     font-weight: 600;
     position: relative;
     padding-bottom: 0.5rem;
+    color: #fff !important;
 }
 
-.left h3:after, .right h3:after {
+.footer-column h3:after {
     content: '';
     position: absolute;
     left: 0;
@@ -37,62 +39,45 @@
     background-color: #4d4dff;
 }
 
-.location {
+/* Contact item styling */
+.contact-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     gap: 1rem;
 }
 
-.location a {
+.contact-item svg {
+    min-width: 20px;
     color: #fff;
+}
+
+.contact-item a {
+    color: #fff !important;
     text-decoration: none;
     line-height: 1.6;
     transition: color 0.3s ease;
 }
 
-.location a:hover {
-    color: #4d4dff;
-}
-
-.right {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.contact-item a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
+/* This is the key fix - explicit hover for contact links */
 .contact-item a:hover {
-    color: #4d4dff;
+    color: #4d4dff !important;
 }
 
 .org-number {
     margin-top: 0.5rem;
     font-size: 0.95rem;
-    color: #ccc;
+    color: #ccc !important;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
+/* Social media styling */
 .social {
     display: flex;
     gap: 1.2rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .social a {
@@ -103,13 +88,14 @@
     height: 40px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    color: #fff !important;
     transition: all 0.3s ease;
 }
 
 .social a:hover {
-    background-color: #4d4dff;
+    background-color: #4d4dff !important;
     transform: translateY(-3px);
+    color: #fff !important;
 }
 
 .copyright {
@@ -118,7 +104,26 @@
     padding-top: 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.9rem;
-    color: #aaa;
+    color: #aaa !important;
+}
+
+/* Theme-specific overrides */
+[data-theme="light"] .footer,
+[data-theme="light"] .footer h3,
+[data-theme="light"] .footer p,
+[data-theme="light"] .footer a,
+[data-theme="light"] .footer span,
+[data-theme="light"] .footer div,
+[data-theme="light"] .footer svg {
+    color: #fff !important;
+}
+
+[data-theme="light"] .contact-item a:hover {
+    color: #4d4dff !important;
+}
+
+[data-theme="light"] .social a:hover {
+    background-color: #4d4dff !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -127,7 +132,7 @@
         grid-gap: 2rem;
     }
     
-    .left h3:after, .right h3:after {
+    .footer-column h3:after {
         width: 40px;
     }
     
@@ -145,7 +150,7 @@
         padding: 0 1rem;
     }
     
-    .left h3, .right h3 {
+    .footer-column h3 {
         font-size: 1.3rem;
     }
 }

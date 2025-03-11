@@ -1,4 +1,4 @@
-import "./HeroImg2styles.css";
+import "./HeroImg2Styles.css";
 
 import React, { Component } from "react";
 

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import React1 from "../assets/react1.jpg";
@@ -10,7 +11,7 @@ const AboutContent = () => {
       <div className="left">
         <h1>Om oss</h1>
         <p>Verksamhetsbeskrivning: snickare, plattsättare, målare,
-           montering av kök, markanläggning, rivning, ombyggnad, tillbyggnad. </p>
+           montering av kök, markanläggning, rivning, ombyggnad, tillbyggnad.</p>
         <Link to="/contact">
           <button className="btn">Kontakt</button>
         </Link>
@@ -19,10 +20,10 @@ const AboutContent = () => {
       <div className="right">
         <div className="img-container">
           <div className="img-stack top">
-            <img src={React1} className="img" alt="true" />
+            <img src={React1 || "/placeholder.svg"} className="img" alt="true" loading="lazy" />
           </div>
           <div className="img-stack bottom">
-            <img src={React2} className="img" alt="true" />
+            <img src={React2 || "/placeholder.svg"} className="img" alt="true" loading="lazy" />
           </div>
         </div>
       </div>

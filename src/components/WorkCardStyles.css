@@ -1,6 +1,11 @@
 .project-heading {
     text-align: center;
     padding: 4rem 0 2rem 0;
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .project-heading {
+    color: var(--text-primary) !important;
 }
 
 .project-container {
@@ -15,10 +20,17 @@
 .project-card {
     background: #1a191a;
     padding: 1.2rem 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
 .project-card img {
     width: 100%;
+    border-radius: 4px;
 }
 
 .project-title {
@@ -45,13 +57,16 @@
     text-align: center;
 }
 
+.pro-btns .btn:hover {
+    background: var(--accent-color) !important;
+    color: #fff !important;
+    transform: translateY(-3px);
+}
 
-@media  screen and (max-width: 740px) {
+@media screen and (max-width: 740px) {
     .project-container {
-        max-width:  90%;
+        max-width: 90%;
         margin: auto;
         grid-template-columns: 1fr;
     }
-    
 }
-

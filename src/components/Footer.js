@@ -3,10 +3,9 @@ import React from "react";
 import {
   FaFacebook,
   FaHome,
-  FaLinkedin,
   FaMailBulk,
   FaPhone,
-  FaTwitter,
+  FaInstagram
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -15,53 +14,54 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-container">
-        <div className="left">
+        {/* Company and Address */}
+        <div className="footer-column">
           <h3>S2 Bygg AB</h3>
-          <div className="location">
-            <FaHome size={20} style={{ color: "#fff" }} />
-            <div>
-              <a 
-                href="https://www.google.com/maps/place/Backlurav%C3%A4gen+15B,+149+43+Nyn%C3%A4shamn/@58.9137267,17.9358904,17z/"
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                BACKLURAVÄGEN 15 B<br />
-                149 43 Nynäshamn
-              </a>
-            </div>
+          <div className="contact-item">
+            <FaHome size={20} />
+            <a 
+              href="https://www.google.com/maps/place/Backlurav%C3%A4gen+15B,+149+43+Nyn%C3%A4shamn/@58.9137267,17.9358904,17z/"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              BACKLURAVÄGEN 15 B<br />
+              149 43 Nynäshamn
+            </a>
           </div>
         </div>
-
-        <div className="right">
+        
+        {/* Contact Information */}
+        <div className="footer-column">
           <h3>Kontakta oss</h3>
-          <div className="contact-links">
-            <div className="contact-item">
-              <FaPhone size={20} />
-              <a href="tel:+46700039072">+46 70 003 9072</a>
-            </div>
-            <div className="contact-item">
-              <FaMailBulk size={20} />
-              <a href="mailto:s2byggab@outlook.com">s2byggab@outlook.com</a>
-            </div>
-            <div className="org-number">
-              <span>Org.nr: 559431-9013</span>
-            </div>
+          <div className="contact-item">
+            <FaPhone size={20} />
+            <a href="tel:+46700039072">+46 70 003 9072</a>
           </div>
+          <div className="contact-item">
+            <FaMailBulk size={20} />
+            <a href="mailto:s2byggab@outlook.com">s2byggab@outlook.com</a>
+          </div>
+          <div className="org-number">
+            <span>Org.nr: 559431-9013</span>
+          </div>
+        </div>
+        
+        {/* Social Media */}
+        <div className="footer-column">
+          <h3>Följ oss</h3>
           <div className="social">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <FaFacebook size={24} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <FaTwitter size={24} />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={24} />
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram size={24} />
             </a>
           </div>
         </div>
       </div>
+      
       <div className="copyright">
-        <p>&copy; {2025} S2 Bygg AB. Alla rättigheter förbehållna.</p>
+        <p>&copy; {currentYear} S2 Bygg AB. Alla rättigheter förbehållna.</p>
       </div>
     </div>
   );

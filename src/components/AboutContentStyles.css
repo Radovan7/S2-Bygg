@@ -3,24 +3,33 @@
   margin: 3rem 0;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Sprečava centriranje */
+  justify-content: space-between; 
   flex-wrap: wrap;
   height: 100%;
-  padding: 0 2rem; /* Dodatni padding za bolji izgled */
+  padding: 0 2rem; 
 }
 
 .about .left {
-  text-align: left; /* Poravnanje teksta levo */
+  text-align: left; 
   margin: auto;
   padding: 1rem;
-  max-width: 400px; /* Malo povećan max-width */
+  max-width: 400px; 
+}
+
+.about .left h1 {
+  color: var(--text-primary);
 }
 
 .about .left p {
   margin: 1.2rem 0;
-  line-height: 1.5; /* Poboljšava čitljivost */
+  line-height: 1.5;
+  color: var(--text-primary);
 }
 
+[data-theme="light"] .about .left h1,
+[data-theme="light"] .about .left p {
+  color: var(--text-primary) !important;
+}
 .about .right {
   max-width: 700px;
 }
@@ -30,7 +39,7 @@
   grid-template-columns: repeat(12, 1fr);
   position: relative;
   align-items: center;
-  justify-content: center; /* Centriranje slika */
+  justify-content: center;
   text-align: center;
 }
 
