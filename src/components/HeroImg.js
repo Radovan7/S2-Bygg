@@ -15,7 +15,7 @@ const HeroImg = () => {
     </div>
     <div className="content">
       <h1>Plats för nya möjligheter</h1>
-      <p>Vi är det breda expertföretaget inom ...</p>
+      <p>Vi är det breda expertföretaget inom ..</p>
     </div>
  </div>
   );
