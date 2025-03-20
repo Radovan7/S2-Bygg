@@ -1,23 +1,17 @@
-import "./HeroImgStyles.css"
-
-import React from 'react'
-
-import IntroImg from "../assets/IMG_0940.jpg"
-
-import { Link } from "react-router-dom";
+import "./HeroImgStyles.css";
+import React from 'react';
 
 const HeroImg = () => {
   return (
-  <div className="hero">
-    <div className="mask">
-      <img className="into-img"
-      src={IntroImg} alt="IntroImg" />
+    <div className="hero">
+      <div className="mask">
+        <div className="into-img"></div> 
+      </div>
+      <div className="content">
+        <h2>Plats för nya möjligheter</h2>
+        <p>Vi är det breda expertföretaget inom ..</p>
+      </div>
     </div>
-    <div className="content">
-      <h1>Plats för nya möjligheter</h1>
-      <p>Vi är det breda expertföretaget inom ..</p>
-    </div>
- </div>
   );
 };
 

@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <div>
       <Navbar />
-      <HeroImg2 heading="KONTAKT." 
+      <HeroImg2 heading="KONTAKT" 
       text="Välkommen att kontakta oss!" />
       <Form />
       <Footer />

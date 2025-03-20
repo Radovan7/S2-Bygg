@@ -1,23 +1,62 @@
-import pro1 from '../assets/project1.jpg';
-import pro2 from '../assets/project2.jpg';
-import pro3 from '../assets/project3.jpg';
+import pro1 from "../assets/IMG_3521.jpg"
+import pro2 from "../assets/IMG_0428.jpg"
+import pro3 from "../assets/IMG_5058.JPG"
 
-const ProjectCardData = [
-    {
-        imgsrc: pro1,
-        title: "BADRUMSRENOVERING",
-        text: "Vi hjälper dig med allt från idé och planering till VVS-installationer",
-    },
-    {
-        imgsrc: pro2,
-        title: "KÖKSRENOVERING",
-        text: "Med oss får du en pålitlig partner som bygger ditt kök från grund till klart",
-    },
-    {
-        imgsrc: pro3,
-        title: "TOTALRENOVERING",
-        text: "S2-Bygg sköter om hela din renovering, från start till slutförande",
-    },
-]   
+import bath1 from "../assets/IMG_3521.jpg"
+import bath2 from "../assets/IMG_5070.JPG"
+import bath3 from "../assets/IMG_5069.JPG"
+import bath4 from "../assets/IMG_5073.JPG"
+import bath5 from "../assets/IMG_5074.JPG"
+import bath6 from "../assets/IMG_2574.jpg"
+import kitchen1 from "../assets/IMG_0428.jpg"
+import kitchen2 from "../assets/IMG_2573.jpg"
+import kitchen3 from "../assets/IMG_5055.JPG"
+import kitchen4 from "../assets/IMG_5079.JPG"
+import kitchen5 from "../assets/IMG_2574.jpg"
+import kitchen6 from "../assets/IMG_2574.jpg"
+import reno1 from "../assets/IMG_2460.jpg"
+import reno2 from "../assets/IMG_5052.JPG"
+import reno3 from "../assets/IMG_5054.JPG"
+import reno4 from "../assets/IMG_5053.JPG"
+import reno5 from "../assets/IMG_5077.JPG"
+import reno6 from "../assets/IMG_2574.jpg"
 
-export default ProjectCardData;
+const WorkCardData = [
+  {
+    imgsrc: pro1,
+    title: "BADRUMSRENOVERING",
+    text: "Vi hjälper dig med allt från idé och planering till VVS-installationer",
+    width: "600",
+    height: "480",
+    alt: "Badrumsrenovering av S2 Bygg AB",
+    loading: "lazy",
+    id: "badrum", 
+    detailImages: [pro1, bath1, bath2, bath3, bath4, bath5, bath6], // Dodatne slike
+  },
+  {
+    imgsrc: pro2,
+    title: "KÖKSRENOVERING",
+    text: "Med oss får du en pålitlig partner som bygger ditt kök från grund till klart",
+    width: "600",
+    height: "480",
+    alt: "Köksrenovering av S2 Bygg AB",
+    loading: "lazy",
+    id: "kok",
+    detailImages: [pro2, kitchen1, kitchen2, kitchen3, kitchen4, kitchen5, kitchen6],
+  },
+  {
+    imgsrc: pro3,
+    title: "TOTALRENOVERING",
+    text: "S2-Bygg sköter om hela din renovering, från start till slutförande",
+    width: "600",
+    height: "480",
+    alt: "Totalrenovering av S2 Bygg AB",
+    loading: "lazy",
+    id: "renovering",
+    detailImages: [pro3, reno1, reno2, reno3, reno4, reno5, reno6],
+  }
+];
+
+export default WorkCardData;
+
+
