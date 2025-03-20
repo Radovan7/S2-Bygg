@@ -1,72 +1,165 @@
-.project-heading {
+
+.work-container {
+    width: 100%;
+    padding: 6rem 1rem;
+    background: #f9f9f9;
+  }
+  
+  .project-heading {
     text-align: center;
-    padding: 4rem 0 2rem 0;
-    color: var(--text-primary);
-}
-
-[data-theme="light"] .project-heading {
-    color: var(--text-primary) !important;
-}
-
-.project-container {
-    max-width: 1140px;
+    padding: 1rem 0 3rem 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .project-container {
+    max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 40px;
     padding-bottom: 5rem;
-}
-
-.project-card {
-    background: #1a191a;
-    padding: 1.2rem 1rem;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card img {
+  }
+  
+  .project-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-card img {
     width: 100%;
-    border-radius: 4px;
-}
-
-.project-title {
-    color: #fff;
-    padding: 1rem 0;
-}
-
-.pro-details {
-    padding-bottom: 1rem;
-    font-size: 1.1rem;
-    text-align: justify;
-}
-
-.pro-btns {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .project-title {
+    color: #333;
+    padding: 1.5rem 1rem 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .pro-details {
+    padding: 0.5rem 1rem 2rem;
+  }
+  
+  .pro-details p {
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #555 !important;
+    line-height: 1.6;
+  }
+  
+  .pro-btns {
     display: flex;
-    justify-content: center;
-    padding: 0.5rem 0;
-    margin-top: 1.5rem;
-}
-
-.pro-btns .btn {
-    padding: 0.5rem 1rem;
-    width: 150px;
-    text-align: center;
-}
-
-.pro-btns .btn:hover {
-    background: var(--accent-color) !important;
-    color: #fff !important;
+    justify-content: flex-start;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background: #2d5a88;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #1e3c5a;
     transform: translateY(-3px);
-}
-
-@media screen and (max-width: 740px) {
-    .project-container {
-        max-width: 90%;
-        margin: auto;
-        grid-template-columns: 1fr;
+  }
+  
+  html.dark .work-container,
+  body.dark .work-container,
+  .dark .work-container,
+  .dark-mode .work-container,
+  .dark-theme .work-container,
+  [data-theme="dark"] .work-container {
+    background: #1a1a1a !important;
+  }
+  
+  html.dark .project-heading,
+  body.dark .project-heading,
+  .dark .project-heading,
+  .dark-mode .project-heading,
+  .dark-theme .project-heading,
+  [data-theme="dark"] .project-heading {
+    color: #f0f0f0 !important;
+  }
+  
+  html.dark .project-card,
+  body.dark .project-card,
+  .dark .project-card,
+  .dark-mode .project-card,
+  .dark-theme .project-card,
+  [data-theme="dark"] .project-card {
+    background: #2a2a2a !important;
+  }
+  
+  html.dark .project-title,
+  body.dark .project-title,
+  .dark .project-title,
+  .dark-mode .project-title,
+  .dark-theme .project-title,
+  [data-theme="dark"] .project-title {
+    color: #f0f0f0 !important;
+  }
+  
+  html.dark .pro-details p,
+  body.dark .pro-details p,
+  .dark .pro-details p,
+  .dark-mode .pro-details p,
+  .dark-theme .pro-details p,
+  [data-theme="dark"] .pro-details p {
+    color: #d0d0d0 !important;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .project-heading {
+      font-size: 2rem;
+      padding: 1rem 0 2rem 0;
     }
-}
+  
+    .project-container {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .project-heading {
+      font-size: 1.8rem;
+    }
+  
+    .project-title {
+      font-size: 1.3rem;
+    }
+  
+    .pro-details p {
+      font-size: 0.9rem;
+    }
+  
+    .btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  

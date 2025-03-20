@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 .no-transitions * {
   transition: none !important;
 }
 
 :root {
- 
   --bg-primary: #fff;
   --bg-secondary: rgba(255, 255, 255, 0.95);
   --text-primary: #222;
   --text-secondary: #555;
   --accent-color: #4d4dff;
   --accent-hover: #3a3ad9;
-  --button-bg: rgb(248,217,15);
+  --button-bg: rgb(248, 217, 15);
   --button-text: #222;
   --button-hover-bg: rgba(255, 255, 255, 0.2);
   --button-hover-text: #fff;
@@ -21,14 +20,13 @@
 }
 
 [data-theme="dark"] {
-
   --bg-primary: #000;
   --bg-secondary: #121212;
   --text-primary: #fff;
   --text-secondary: #aaa;
   --accent-color: #6565ff;
   --accent-hover: #7a7aff;
-  --button-bg: rgb(248,217,15);
+  --button-bg: rgb(248, 217, 15);
   --button-text: #222;
   --button-hover-bg: rgba(255, 255, 255, 0.2);
   --button-hover-text: #fff;
@@ -36,66 +34,69 @@
   --footer-bg: rgba(19, 19, 19, 0.8);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Outfit", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
 }
 
-body{
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    transition: background-color 0.3s ease, color 0.3s ease;
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,
 h4,
 p,
 a {
-    color: var(--text-primary);
-    text-decoration: none;
+  color: var(--text-primary);
+  text-decoration: none;
 }
 
-ul{
-    list-style-type: none;
+ul {
+  list-style-type: none;
 }
 
 .btn {
-    padding: 12px 32px;
-    font-size: 1rem;
-    text-transform: none;
-    background: var(--button-bg);
-    color: var(--button-text);
-    border: 1px solid var(--text-primary);
-    font-weight: 600;
-    cursor: pointer;  
-    transition: all 0.3s ease;
+  padding: 12px 32px;
+  font-size: 1rem;
+  text-transform: none;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--text-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn-light {
-    background: transparent;
-    color: var(--text-primary);
+  background: transparent;
+  color: var(--text-primary);
 }
 
 .btn:hover {
-    background: var(--accent-color) !important;
-    color: #fff !important;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+  background: var(--accent-color) !important;
+  color: #fff !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 .pro-btns .btn:hover,
 .about .btn:hover,
 form .btn:hover {
-    background: var(--accent-color) !important;
-    color: #fff !important;
+  background: var(--accent-color) !important;
+  color: #fff !important;
 }
 
-.footer,
+.footer {
+  background-color: var(--card-bg) !important;
+}
+
 .project-card {
-    background-color: var(--card-bg) !important;
+  background-color: var(--card-bg) !important;
 }
 
 .footer,
@@ -104,31 +105,34 @@ form .btn:hover {
 .footer p,
 .footer a,
 .footer span,
-.footer div,
+.footer div {
+  color: #fff !important;
+}
+
 .project-card,
 .project-card h3,
 .project-card p,
 .project-title,
 .pro-details {
-    color: #fff !important;
+  color: #fff !important;
 }
 
 .social a {
-    color: #fff !important;
+  color: #fff !important;
 }
 
 .header {
-    color: #fff;
+  color: #fff;
 }
 
 .header h1,
 .nav-menu li a {
-    color: #fff;
+  color: #fff;
 }
 
 .theme-toggle,
 .theme-toggle-mobile button {
-    color: #fff;
+  color: #fff;
 }
 
 .hero-img h1,
@@ -139,8 +143,8 @@ form .btn:hover {
 .project-heading p,
 .form-heading h1,
 .form-heading p {
-    color: #fff !important;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
+  color: #fff !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
 }
 
 form label,
@@ -149,18 +153,18 @@ form textarea,
 .form label,
 .form input,
 .form textarea {
-    color: var(--text-primary) !important;
+  color: var(--text-primary) !important;
 }
 
 .form {
-    background-color: var(--bg-primary) !important;
+  background-color: var(--card-bg) !important; 
 }
 
 [class*="hero"],
 [class*="mask"],
 [class*="banner"],
 [class*="heading"] {
-    color: #fff !important;
+  color: #fff !important;
 }
 
 [class*="hero"] h1,
@@ -171,39 +175,44 @@ form textarea,
 [class*="banner"] p,
 [class*="heading"] h1,
 [class*="heading"] p {
-    color: #fff !important;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
+  color: #fff !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
 }
 
 [data-theme="light"] .about .left h1,
 [data-theme="light"] .about .left p {
-    color: var(--text-primary) !important;
-    text-shadow: none !important;
+  color: var(--text-primary) !important;
+  text-shadow: none !important;
 }
 
-[data-theme="light"] h1:not([class*="hero"] h1):not([class*="mask"] h1):not([class*="heading"] h1):not(.footer h1):not(.header h1) {
-    color: var(--text-primary) !important;
+[data-theme="light"]
+  h1:not([class*="hero"] h1):not([class*="mask"] h1):not([class*="heading"] h1):not(.footer h1):not(.header h1):not(
+    .project-title
+  ) {
+  color: var(--text-primary) !important;
 }
 
-[data-theme="light"] p:not([class*="hero"] p):not([class*="mask"] p):not([class*="heading"] p):not(.footer p) {
-    color: var(--text-primary) !important;
+[data-theme="light"]
+  p:not([class*="hero"] p):not([class*="mask"] p):not([class*="heading"] p):not(.footer p):not(.pro-details p) {
+  color: var(--text-primary) !important;
 }
 
 [data-theme="light"] form label,
 [data-theme="light"] .form label {
-    color: var(--text-primary) !important;
+  color: #fff !important;
 }
 
 [data-theme="light"] form input,
 [data-theme="light"] form textarea,
 [data-theme="light"] .form input,
 [data-theme="light"] .form textarea {
-    color: var(--text-primary) !important;
-    background-color: var(--bg-primary) !important;
-    border-color: var(--text-secondary) !important;
+  color: var(--text-primary) !important;
+  background-color: var(--bg-primary) !important;
+  border-color: var(--text-secondary) !important;
 }
 
 [data-theme="light"] .project-heading {
-    color: var(--text-primary) !important;
-    text-shadow: none !important;
+  color: var(--text-primary) !important;
+  text-shadow: none !important;
 }
+

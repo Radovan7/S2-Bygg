@@ -1,28 +1,30 @@
-import "./WorkCardStyles.css";
-import WorkCard from "./WorkCard";
-import WorkCardData from "./WorkCardData";
-
-import React from "react";
+import "./WorkCardStyles.css"
+import WorkCard from "./WorkCard"
+import WorkCardData from "./WorkCardData"
 
 const Work = () => {
   return (
-    <div className="work-container">
-      <h1 className="project-heading">Tjänster</h1>
+    <div id="tjanster" className="work-container">
+      <h2 className="project-heading">Tjänster</h2>
       <div className="project-container">
         {WorkCardData.map((val, ind) => {
-            return (
-                <WorkCard
-                imgsrc={val.imgsrc}
-                title={val.title}
-                text={val.text}
-                key={ind}
-             />
-            );
-        }
-        )}
+          return (
+            <WorkCard
+              imgsrc={val.imgsrc}
+              title={val.title}
+              text={val.text}
+              id={val.id}
+              key={ind}
+              width={val.width}
+              height={val.height}
+              alt={val.alt}
+              loading={val.loading}
+            />
+          )
+        })}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Work;
+export default Work
