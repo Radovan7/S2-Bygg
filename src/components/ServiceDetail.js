@@ -48,9 +48,20 @@ const ServiceDetail = () => {
       </div>
 
       <div className="service-gallery">
-        {service.detailImages.map((img, index) => (
+        {service.detailImages && service.detailImages.map((img, index) => (
           <div key={index} className="gallery-item">
-            <img src={img || "/placeholder.svg"} alt={`${service.title} - bild ${index + 1}`} loading="lazy" />
+            <img 
+              src={img || "/placeholder.svg"} 
+              alt={`${service.title} - bild ${index + 1}`} 
+              loading="lazy" 
+              style={{ 
+                width: '100%', 
+                height: 'auto', 
+                display: 'block',
+                objectFit: 'cover',
+                aspectRatio: '4/3'
+              }} 
+            />
           </div>
         ))}
       </div>
@@ -65,4 +76,3 @@ const ServiceDetail = () => {
 }
 
 export default ServiceDetail
-
