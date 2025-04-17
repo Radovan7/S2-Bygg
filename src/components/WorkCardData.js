@@ -31,7 +31,7 @@ const WorkCardData = [
     alt: "Badrumsrenovering av S2 Bygg AB",
     loading: "lazy",
     id: "badrum", 
-    detailImages: [pro1, bath1, bath2, bath3, bath4, bath5, bath6], // Dodatne slike
+    detailImages: [pro1, bath1, bath2, bath3, bath4, bath5, bath6], 
   },
   {
     imgsrc: pro2,

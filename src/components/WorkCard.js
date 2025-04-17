@@ -14,7 +14,7 @@ const WorkCard = (props) => {
       />
       <h2 className="project-title">{props.title}</h2>
       <div className="pro-details">
-        <p style={{ textShadow: "0 0 5px rgba(0, 0, 0, 0.7)" }}>{props.text}</p>
+        <p>{props.text}</p>
         <div className="pro-btns">
           <NavLink to={`/tjanster/${props.id}`} className="btn">
             Se mer
