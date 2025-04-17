@@ -2,6 +2,7 @@ import "./NavbarStyles.css";
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
+import Logo from './Logo'; 
 
 const Navbar = () => {
     const [click, setClick] = useState(false);
@@ -33,7 +34,8 @@ const Navbar = () => {
 
     return (
         <div className={color ? "header header-bg" : "header"}>
-            <Link to="/">
+            <Link to="/" className="logo-container">
+                <Logo color="white" className="logo" />
                 <h1>S2 Bygg AB</h1> 
             </Link>
             <div className="nav-right">
