@@ -1,76 +1,89 @@
 // src/components/Form.jsx
-import "./FormStyles.css"
-import { useState, useRef } from "react"
+import "./FormStyles.css";
+import { useState } from "react";
 
 const Form = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState({
     message: "",
     success: false,
     show: false,
-  })
+  });
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setStatus({ message: "", success: false, show: false })
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus({ message: "", success: false, show: false });
+
+    const formData = {
+      user_name: e.target.user_name.value,
+      user_email: e.target.user_email.value,
+      subject: e.target.subject.value,
+      message: e.target.message.value
+    };
 
     try {
-      // Prikupi podatke iz forme
-      const formData = {
-        user_name: e.target.user_name.value,
-        user_email: e.target.user_email.value,
-        subject: e.target.subject.value,
-        message: e.target.message.value
-      }
-
-      console.log("Sending form data:", formData)
-
-      // Pozovi API
-      const response = await fetch('/api/send-email', {
+      // Skicka e-post till företaget (S2 Bygg AB)
+      const sendToCompany = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${process.env.REACT_APP_RESEND_API_KEY}`
         },
-        body: JSON.stringify(formData),
-      })
-
-      console.log("Response status:", response.status)
-      
-      // Pokušaj da parsiraš response kao JSON
-      let data
-      const contentType = response.headers.get("content-type")
-      if (contentType && contentType.indexOf("application/json") !== -1) {
-        data = await response.json()
-        console.log("Response data:", data)
-      } else {
-        const text = await response.text()
-        console.log("Response text:", text)
-        throw new Error("Server nije vratio JSON odgovor")
-      }
-
-      if (response.ok) {
-        console.log("Email uspešno poslat!")
-        setStatus({
-          message: "Ditt meddelande har skickats!",
-          success: true,
-          show: true,
+        body: JSON.stringify({
+          from: "S2 Bygg AB <kontakt@s2bygg.se>",
+          to: "s2byggab@outlook.com",
+          subject: formData.subject,
+          html: `<p><strong>Namn:</strong> ${formData.user_name}</p>
+                 <p><strong>Email:</strong> ${formData.user_email}</p>
+                 <p><strong>Meddelande:</strong><br/>${formData.message}</p>`
         })
-        e.target.reset()
-      } else {
-        throw new Error(data.error || "Något gick fel")
+      });
+
+      if (!sendToCompany.ok) {
+        const errorData = await sendToCompany.json();
+        throw new Error(errorData.error.message || "Fel vid skickandet till företaget");
       }
+
+      // Skicka automatiskt svar till kunden
+      const autoReply = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${process.env.REACT_APP_RESEND_API_KEY}`
+        },
+        body: JSON.stringify({
+          from: "S2 Bygg AB <kontakt@s2bygg.se>",
+          to: formData.user_email,
+          subject: "Tack för att du kontaktade oss!",
+          html: `<p>Hej ${formData.user_name},</p>
+                 <p>Tack för att du kontaktade S2 Bygg AB. Vi har mottagit ditt meddelande och kommer att återkomma till dig så snart som möjligt.</p>
+                 <p>Vänliga hälsningar,<br/>S2 Bygg AB</p>`
+        })
+      });
+
+      if (!autoReply.ok) {
+        const errorData = await autoReply.json();
+        throw new Error(errorData.error.message || "Fel vid skickandet av automatiskt svar");
+      }
+
+      setStatus({
+        message: "Ditt meddelande har skickats!",
+        success: true,
+        show: true,
+      });
+      e.target.reset();
     } catch (error) {
-      console.error("Greška pri slanju emaila:", error)
+      console.error("Fel vid skickandet av e-post:", error);
       setStatus({
         message: `Det gick inte att skicka meddelandet: ${error.message || "Okänt fel"}`,
         success: false,
         show: true,
-      })
+      });
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <div className="form-container">
@@ -78,8 +91,8 @@ const Form = () => {
         <label htmlFor="name">Namn</label>
         <input type="text" id="name" name="user_name" placeholder="Ditt namn..." required />
 
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="user_email" placeholder="Din email..." required />
+        <label htmlFor="email">E-post</label>
+        <input type="email" id="email" name="user_email" placeholder="Din e-postadress..." required />
 
         <label htmlFor="subject">Ämne</label>
         <input type="text" id="subject" name="subject" placeholder="Ämne..." required />
@@ -107,8 +120,13 @@ const Form = () => {
           </div>
         )}
       </form>
-    </div>
-  )
-}
 
-export default Form
+      {/* Extra info under formuläret */}
+      <div style={{ marginTop: "2rem", textAlign: "center", fontStyle: "italic", color: "#555" }}>
+        Vi svarar vanligtvis inom 24 timmar.
+      </div>
+    </div>
+  );
+};
+
+export default Form;
