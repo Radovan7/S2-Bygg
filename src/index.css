@@ -1,18 +1,15 @@
+/* Učitaj font Outfit sa Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-@font-face {
-  font-family: "Outfit";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: local("Outfit"), url(https://fonts.gstatic.com/s/outfit/v11/QGYvz_MVcBeNP4NJtEtq.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+/* Resetovanje stilova */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
 }
 
-.no-transitions * {
-  transition: none !important;
-}
-
+/* Globalne promenljive za teme */
 :root {
   --bg-primary: #fff;
   --bg-secondary: rgba(255, 255, 255, 0.95);
@@ -43,13 +40,7 @@
   --footer-bg: rgba(19, 19, 19, 0.8);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Outfit", sans-serif;
-}
-
+/* Osnovni stilovi */
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -68,6 +59,7 @@ ul {
   list-style-type: none;
 }
 
+/* Stilovi za dugmad */
 .btn {
   padding: 12px 32px;
   font-size: 1rem;
@@ -100,11 +92,8 @@ form .btn:hover {
   color: #fff !important;
 }
 
+/* Stilovi za footer */
 .footer {
-  background-color: var(--card-bg) !important;
-}
-
-.project-card {
   background-color: var(--card-bg) !important;
 }
 
@@ -118,6 +107,11 @@ form .btn:hover {
   color: #fff !important;
 }
 
+/* Stilovi za kartice */
+.project-card {
+  background-color: var(--card-bg) !important;
+}
+
 .project-card,
 .project-card h3,
 .project-card p,
@@ -126,10 +120,12 @@ form .btn:hover {
   color: #fff !important;
 }
 
+/* Stilovi za društvene mreže */
 .social a {
   color: #fff !important;
 }
 
+/* Stilovi za header */
 .header {
   color: #fff;
 }
@@ -139,11 +135,13 @@ form .btn:hover {
   color: #fff;
 }
 
+/* Stilovi za teme */
 .theme-toggle,
 .theme-toggle-mobile button {
   color: #fff;
 }
 
+/* Stilovi za hero sekciju */
 .hero-img h1,
 .hero-img p,
 .about h1,
@@ -156,6 +154,7 @@ form .btn:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
 }
 
+/* Stilovi za formu */
 form label,
 form input,
 form textarea,
@@ -166,9 +165,10 @@ form textarea,
 }
 
 .form {
-  background-color: var(--card-bg) !important; 
+  background-color: var(--card-bg) !important;
 }
 
+/* Stilovi za specifične klase */
 [class*="hero"],
 [class*="mask"],
 [class*="banner"],
@@ -188,6 +188,7 @@ form textarea,
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
 }
 
+/* Stilovi za light temu */
 [data-theme="light"] .about .left h1,
 [data-theme="light"] .about .left p {
   color: var(--text-primary) !important;
@@ -224,6 +225,3 @@ form textarea,
   color: var(--text-primary) !important;
   text-shadow: none !important;
 }
-
-
-
