@@ -1,0 +1,43 @@
+const Images = {
+    pro1: require("./IMG_3521.jpg"),
+    pro2: require("./IMG_0428.jpg"),
+    pro3: require("./IMG_5058.JPG"),
+    bath: [
+      require("./IMG_3521.jpg"),
+      require("./IMG_5070.JPG"),
+      require("./IMG_5069.JPG"),
+      require("./IMG_5073.JPG"),
+      require("./IMG_5074.JPG"),
+      require("./IMG_2574.jpg"),
+    ],
+    kitchen: [
+      require("./IMG_0428.jpg"),
+      require("./IMG_2573.jpg"),
+      require("./IMG_5055.JPG"),
+      require("./IMG_5079.JPG"),
+      require("./IMG_2574.jpg"),
+    ],
+    renovation: [
+      require("./IMG_2460.jpg"),
+      require("./IMG_5052.JPG"),
+      require("./IMG_5054.JPG"),
+      require("./IMG_5053.JPG"),
+      require("./IMG_5077.JPG"),
+      require("./IMG_2574.jpg"),
+      require("./IMG_770.jpg"),
+      require("./IMG_771.jpg"),
+      require("./IMG_772.jpg"),
+      require("./IMG_773.jpg"),
+      require("./IMG_774.jpg"),
+      require("./IMG_775.jpg"),
+      require("./IMG_776.jpg"),
+      require("./IMG_777.jpg"),
+      require("./IMG_778.jpg"),
+      require("./IMG_779.jpg"),
+      require("./IMG_880.jpg"),
+      require("./IMG_881.jpg"),
+      require("./IMG_882.jpg"),
+    ],
+  };
+  
+  export default Images;
