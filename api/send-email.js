@@ -3,15 +3,11 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
-  // Kontrollera HTTP-metoden
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Endast POST-metod stöds' });
   }
-
-  // Extrahera data från förfrågan
   const { user_name, user_email, subject, message } = req.body;
 
-  // Kontrollera om alla fält är ifyllda
   if (!user_name || !user_email || !subject || !message) {
     console.error('Saknade data i förfrågan:', req.body);
     return res.status(400).json({ error: 'Alla fält krävs' });
@@ -20,10 +16,9 @@ export default async function handler(req, res) {
   try {
     console.log('Mottagna data:', { user_name, user_email, subject, message });
 
-    // 1. Skicka e-post till administratören (kontakt e-post)
     const adminResponse = await resend.emails.send({
-      from: 'noreply@resend.com', // Temporär verifierad avsändare
-      to: 's2byggab@outlook.com', // Mottagare
+      from: 'noreply@resend.com', 
+      to: 's2byggab@outlook.com', 
       subject: `Nytt meddelande från hemsidan: ${subject}`,
       html: `
         <p><strong>Namn:</strong> ${user_name}</p>
@@ -35,9 +30,8 @@ export default async function handler(req, res) {
 
     console.log('E-post skickad till administratören:', adminResponse);
 
-    // 2. Skicka ett automatiskt svar till användaren
     const userResponse = await resend.emails.send({
-      from: 'noreply@resend.com', // Samma avsändare
+      from: 'noreply@resend.com', 
       to: user_email,
       subject: 'Tack för ditt meddelande!',
       html: `
@@ -49,7 +43,6 @@ export default async function handler(req, res) {
 
     console.log('Automatiskt svar skickat till användaren:', userResponse);
 
-    // Framgångsrikt svar
     return res.status(200).json({ message: 'E-post skickades' });
   } catch (error) {
     console.error('Fel vid skickandet av e-post:', error.message, error.stack);
