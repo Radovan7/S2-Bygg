@@ -131,6 +131,20 @@ const Form = () => {
           </div>
         )}
       </form>
+      <div className="social-container">
+        <a
+          href="https://www.facebook.com/S2BYGGAB"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-icon"
+        >
+          <img
+            src="/path/to/facebook-icon.png"
+            alt="Facebook"
+            style={{ width: "24px", height: "24px" }}
+          />
+        </a>
+      </div>
     </div>
   );
 };
