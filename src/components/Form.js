@@ -133,7 +133,7 @@ const Form = () => {
       </form>
       <div className="social-container">
         <a
-          href="https://www.facebook.com/klijentova-stranica"
+          href="https://www.facebook.com/S2BYGGAB"
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
