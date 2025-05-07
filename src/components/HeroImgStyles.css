@@ -38,20 +38,22 @@
     width: 100%;
 }
 
-.hero .content h1 {
-    font-size: 4rem;
-    padding: 0.6rem 0 1.5rem;
+.hero .content h2 {
+    font-size: 3rem; /* Primer veličine fonta za h2 */
+    margin-bottom: 1rem; /* Razmak ispod naslova */
+    color: #fff; /* Primer boje teksta */
 }
 
 .hero .content p {
     font-size: 1.4rem;
     font-family: 200;
     text-transform: uppercase;
+    margin-bottom: 1rem; /* Razmak između paragrafa */
 }
 
 @media screen and (max-width: 640px) {
-    .hero .content h1 {
-        font-size: 3rem;
+    .hero .content h2 {
+        font-size: 2.5rem; /* Smanjena veličina za manje ekrane */
     }
     .hero .content p {
         font-size: 1.2rem;

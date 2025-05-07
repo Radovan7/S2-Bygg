@@ -60,7 +60,7 @@
 }
 
 [data-theme="light"] .service-header p {
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+  text-shadow: none !important;
 }
 
 @media (max-width: 768px) {

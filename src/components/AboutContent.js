@@ -10,8 +10,10 @@ const AboutContent = () => {
     <div className="about">
       <div className="left">
         <h1>Om oss</h1>
-        <p>Verksamhetsbeskrivning: snickare, plattsättare, målare,
-           montering av kök, markanläggning, rivning, ombyggnad, tillbyggnad.</p>
+        <p>
+          Med många års erfarenhet i branschen erbjuder vi helhetslösningar för både små och stora projekt. 
+          Oavsett om du behöver hjälp med en komplett köksrenovering eller mindre snickeriarbeten, kan du lita på att vi levererar kvalitet från start till mål.
+        </p>
         <Link to="/contact">
           <button className="btn">Kontakt</button>
         </Link>
