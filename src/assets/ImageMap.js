@@ -26,18 +26,18 @@ const Images = {
       require("./IMG_2574.jpg"),
       require("./IMG_770.jpg"),
       require("./IMG_771.jpg"),
-      require("./IMG_772.jpg"),
-      require("./IMG_773.jpg"),
       require("./IMG_774.jpg"),
       require("./IMG_775.jpg"),
       require("./IMG_776.jpg"),
       require("./IMG_777.jpg"),
-      require("./IMG_778.jpg"),
       require("./IMG_779.jpg"),
       require("./IMG_880.jpg"),
       require("./IMG_881.jpg"),
       require("./IMG_882.jpg"),
-    ],
+      require("./IMG_773.jpg"),
+      require("./IMG_772.jpg"),
+      require("./IMG_778.jpg"),  
+      ],
   };
   
   export default Images;
