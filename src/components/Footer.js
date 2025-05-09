@@ -26,8 +26,8 @@ const Footer = () => {
         <div className="footer-column">
           <h3>Följ oss på sociala medier</h3> 
           <div className="social">
-            <a href="https://facebook.com/S2BYGGAB" target="_blank" rel="noopener noreferrer" title="S2 Bygg AB på Facebook"><FaFacebook size={24} /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="S2 Bygg AB på Instagram"><FaInstagram size={24} /></a>
+            <a href="https://www.facebook.com/S2BYGGAB" target="_blank" rel="noopener noreferrer" title="S2 Bygg AB på Facebook"><FaFacebook size={24} /></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="S2 Bygg AB på Instagram"><FaInstagram size={24} /></a>
           </div>
         </div>
       </div>
