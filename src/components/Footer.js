@@ -1,9 +1,36 @@
 import "./FooterStyles.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaFacebook, FaHome, FaMailBulk, FaPhone, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      if (/android|iPad|iPhone|iPod/i.test(userAgent)) {
+        setIsMobile(true);
+      }
+    };
+    
+    checkMobile();
+  }, []);
+  
+  const facebookUrl = isMobile 
+    ? "fb://page/579825491880638" 
+    : "https://www.facebook.com/S2BYGGAB"; 
+  
+  const handleFacebookClick = (e) => {
+    if (isMobile) {
+      window.location.href = "fb://page/579825491880638";
+      setTimeout(() => {
+        window.location.href = "https://www.facebook.com/S2BYGGAB";
+      }, 2000);
+      
+      e.preventDefault();
+    }
+  };
   
   return (
     <div className="footer">
@@ -26,7 +53,15 @@ const Footer = () => {
         <div className="footer-column">
           <h3>Följ oss på sociala medier</h3> 
           <div className="social">
-            <a href="https://www.facebook.com/S2BYGGAB" target="_blank" rel="noopener noreferrer" title="S2 Bygg AB på Facebook"><FaFacebook size={24} /></a>
+            <a 
+              href={facebookUrl} 
+              onClick={handleFacebookClick}
+              target="_blank" 
+              rel="noopener noreferrer" 
+              title="S2 Bygg AB på Facebook"
+            >
+              <FaFacebook size={24} />
+            </a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="S2 Bygg AB på Instagram"><FaInstagram size={24} /></a>
           </div>
         </div>
