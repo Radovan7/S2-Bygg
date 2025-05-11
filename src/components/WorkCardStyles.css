@@ -63,6 +63,8 @@
   .pro-btns {
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
   }
   
   .btn {
