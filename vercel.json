@@ -1,0 +1,16 @@
+{
+    "redirects": [
+      {
+        "source": "/(.*)",
+        "has": [
+          {
+            "type": "host",
+            "value": "www.s2bygg.com"
+          }
+        ],
+        "destination": "https://s2bygg.com/$1",
+        "permanent": true
+      }
+    ]
+  }
+  

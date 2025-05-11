@@ -57,9 +57,13 @@
 }
 
 .right .bottom {
-  grid-column: 4 / -1;
+  grid-column: 8 / -1;
   grid-row: 1;
   z-index: 5;
+  max-width: 90%;
+  max-height: 500px; 
+  object-fit: cover; 
+  margin: 0 auto; 
 }
 
 @media screen and (max-width: 768px) {

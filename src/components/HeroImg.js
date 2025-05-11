@@ -9,7 +9,12 @@ const HeroImg = () => {
       </div>
       <div className="content">
         <h2>Plats för nya möjligheter</h2>
-        <p>Vi är det breda expertföretaget inom ..</p>
+        <p>
+          Vi är ett brett expertföretag inom bygg med spetskompetens inom snickeri.
+        </p>
+        <p>
+          Vi erbjuder även tjänster inom plattsättning och köksrenovering.
+        </p>
       </div>
     </div>
   );
