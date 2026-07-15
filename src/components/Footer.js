@@ -39,8 +39,8 @@ const Footer = () => {
           <h3>S2 Bygg AB</h3> 
           <div className="contact-item">
             <FaHome size={20} />
-            <a href="https://www.google.com/maps/place/Backluravägen+15B,+149+43+Nynäshamn/" target="_blank" rel="noopener noreferrer">
-              BACKLURAVÄGEN 15 B<br />149 43 Nynäshamn
+            <a href="https://www.google.com/maps/place/Sturevägen+1,+149+40+Nynäshamn/" target="_blank" rel="noopener noreferrer">
+              STUREVÄGEN 1<br />149 40 Nynäshamn
             </a>
           </div>
         </div>
