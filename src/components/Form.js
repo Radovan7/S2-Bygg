@@ -24,9 +24,7 @@ const Form = () => {
 
       console.log("Skickar formulärdata:", formData);
 
-      const apiUrl = process.env.NODE_ENV === 'production' 
-        ? 'https://s2bygg.com/api/send-email' 
-        : '/api/send-email';
+      const apiUrl = '/api/send-email';
 
       const response = await fetch(apiUrl, {
         method: "POST",
